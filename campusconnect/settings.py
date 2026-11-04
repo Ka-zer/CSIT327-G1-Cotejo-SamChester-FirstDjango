@@ -56,7 +56,11 @@ ROOT_URLCONF = 'campusconnect.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
+<<<<<<< HEAD
         'DIRS': [BASE_DIR / 'templates'],
+=======
+        'DIRS': [],
+>>>>>>> 7282921dbbc84e60689a6e34b99624bc5b84393f
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -128,6 +132,10 @@ MAILERS = {
     },
 }
 
+<<<<<<< HEAD
 AUTH_USER_MODEL = 'accounts.CustomUser'
 LOGIN_REDIRECT_URL = 'dashboard'
 LOGOUT_REDIRECT_URL = 'login'
+=======
+AUTH_USER_MODEL = 'accounts.CustomUser'
+>>>>>>> 7282921dbbc84e60689a6e34b99624bc5b84393f

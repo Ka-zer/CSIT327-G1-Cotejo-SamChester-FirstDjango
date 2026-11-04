@@ -1,4 +1,5 @@
 from django.shortcuts import render
+<<<<<<< HEAD
 from django.contrib.auth.mixins import (LoginRequiredMixin, UserPassesTestMixin)
 from django.views.generic import TemplateView
 from accounts.models import CustomUser
@@ -20,3 +21,7 @@ class AdminPanelView(LoginRequiredMixin, UserPassesTestMixin, TemplateView):
     def test_func(self):
         user = self.request.user
         return user.role == CustomUser.Role.ADMIN
+=======
+
+# Create your views here.
+>>>>>>> 7282921dbbc84e60689a6e34b99624bc5b84393f
