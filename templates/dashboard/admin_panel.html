@@ -1,2 +1,10 @@
 {% extends "base.html" %}
-{% block content %}<h2>Admin Panel</h2>{% endblock %}
+{% block title %}Admin Panel · CampusConnect{% endblock %}
+{% block content %}
+<h2 class="mb-3">Admin Panel</h2>
+<div class="card shadow-sm"><div class="card-body">
+  <p class="mb-0">Administrator tools live here. Manage users in the
+  <a href="{% url 'admin:index' %}">Django admin</a>.</p>
+</div></div>
+<a href="{% url 'dashboard' %}" class="btn btn-outline-secondary mt-3">Back to dashboard</a>
+{% endblock %}

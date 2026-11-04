@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+{% block title %}My profile · CampusConnect{% endblock %}
+{% block content %}
+<div class="row justify-content-center">
+  <div class="col-md-8 col-lg-6">
+    <div class="card shadow-sm">
+      <div class="card-body p-4">
+        <h2 class="h4 mb-1">Edit profile</h2>
+        <p class="text-muted small mb-4">
+          Username: <strong>{{ user.username }}</strong> &middot; Role: <strong>{{ user.get_role_display }}</strong>
+        </p>
+        <form method="post" novalidate>
+          {% csrf_token %}
+          {% include "partials/form_fields.html" %}
+          <div class="d-flex gap-2">
+            <button type="submit" class="btn btn-primary">Save changes</button>
+            <a href="{% url 'dashboard' %}" class="btn btn-outline-secondary">Cancel</a>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}

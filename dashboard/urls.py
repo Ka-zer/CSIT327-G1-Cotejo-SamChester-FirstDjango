@@ -6,4 +6,3 @@ urlpatterns = [
     path("admin-panel/", AdminPanelView.as_view(),
          name="admin_panel"),
 ]
- 
